@@ -7,10 +7,9 @@
 # Table of Contents
   * [Introduction](#introduction)
   * [Reference Circuit](#reference-circuit)
-  * [Reference Circuit Diagram](#reference-circuit-diagram)
-  * [Reference Circuit Waveforms](#reference-circuit-waveforms)
 - [Simulation in Synopsys](#simulation-in-synopsys)
-  * [Schematic](#schematic)
+  - [Schematic](#schematic)
+    * [XOR gate](#xor-gate)
   * [Symbols](#symbols)
   * [Parameters set for Voltage Source for inputs](#parameters-set-for-voltage-source-for-inputs)
   * [Parameters set for DC Voltage Source for VDD](#parameters-set-for-dc-voltage-source-for-vdd)  
@@ -74,6 +73,7 @@ Q3 = (C’+QC+A+B)’
 
 # Simulation in Synopsys
 ## Schematic
+###XOR Gate
 ![image](https://user-images.githubusercontent.com/70422874/155391860-09e912b9-d88d-4d67-84d0-2c48db04792c.png)
 ![image](https://user-images.githubusercontent.com/70422874/155391899-e737577b-1376-4b99-b56b-191fa76d165d.png)
 ![image](https://user-images.githubusercontent.com/70422874/155391928-f8b38e8e-c9b8-483f-bfff-9768b1a72945.png)
