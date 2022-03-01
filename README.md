@@ -8,7 +8,7 @@
   * [Introduction](#introduction)
   * [Reference Circuit](#reference-circuit)
 - [Simulation in Synopsys](#simulation-in-synopsys)
-  - [Schematic & Symbols](#schematic-&-symbols)
+  - [Schematic and Symbols](#schematic-and-symbols)
     * [XOR gate](#xor-gate)
     * [Converter Circuit](#converter-circuit)
   * [Implementation](#implementation) 
@@ -31,7 +31,7 @@ and XNOR circuits were used to improve circuit performance and reduce area.
 
 
 # Simulation in Synopsys
-## Schematic & Symbols
+## Schematic and Symbols
 ### XOR Gate
 ![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_ckt.png)
 
