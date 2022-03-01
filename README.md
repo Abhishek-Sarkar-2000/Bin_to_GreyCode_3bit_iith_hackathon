@@ -165,23 +165,23 @@ Here is a graphical comparison of the effect of various _w/l_ values of the inve
 ![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_sim.png)
 
 * (W/L)pFET/(W/L)nFET = **(0.3u/0.05u)/(0.3u/0.06u)**
-* 
+
 ![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_1.png)
 
 * (W/L)pFET/(W/L)nFET = **(0.3u/0.05u)/(0.3u/0.04u)**
-* 
+
 ![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_2.png)
 
 * (W/L)pFET/(W/L)nFET = **(0.3u/0.05u)/(0.3u/0.08u)**
-* 
+
 ![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_3.png)
 
 * (W/L)pFET/(W/L)nFET = **(0.3u/0.08u)/(0.3u/0.06u)**
-* 
+
 ![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_4.png)
 
 * (W/L)pFET/(W/L)nFET = **(0.3u/0.04u)/(0.3u/0.06u)**
-* 
+
 ![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_5.png)
 
 In time interval T1, input A goes high first. The output follows this input only, while any change in voltage of the other two inputs has NO effect on the output, in this time interval, ie. until input A remains high. Similar changes take place in time intervals T2 and T3.
@@ -202,9 +202,9 @@ Thus, the output waveforms obtained match perfectly with the output waveforms ob
 5. https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/
 
 ## References
-_1._ J.Wang, S.Fang and W.Feng, "New EfEcient Designs for XOR and XNOR Functions on the Transistor Level," IEEE Journal on Solid-State Circuits, vol. 29, No.7, pp. 780--786, July 1994.
-_2._ Hanho Lee and G. E. Sobelman, "New low-voltage circuits for XOR and XNOR," Proceedings IEEE SOUTHEASTCON '97. 'Engineering the New Century', 1997, pp. 225-229, doi: 10.1109/SECON.1997.598676.
-_3._ L. Li and J. Hu, "A transmission gate flip-flop based on dual-threshold CMOS techniques," 2009 52nd IEEE International Midwest Symposium on Circuits and Systems, 2009, pp. 539-542, doi: 10.1109/MWSCAS.2009.5236037.
+* J.Wang, S.Fang and W.Feng, "New EfEcient Designs for XOR and XNOR Functions on the Transistor Level," IEEE Journal on Solid-State Circuits, vol. 29, No.7, pp. 780--786, July 1994.
+* Hanho Lee and G. E. Sobelman, "New low-voltage circuits for XOR and XNOR," Proceedings IEEE SOUTHEASTCON '97. 'Engineering the New Century', 1997, pp. 225-229, doi: 10.1109/SECON.1997.598676.
+* L. Li and J. Hu, "A transmission gate flip-flop based on dual-threshold CMOS techniques," 2009 52nd IEEE International Midwest Symposium on Circuits and Systems, 2009, pp. 539-542, doi: 10.1109/MWSCAS.2009.5236037.
 
 
 
