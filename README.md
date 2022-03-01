@@ -10,13 +10,13 @@
 - [Simulation in Synopsys](#simulation-in-synopsys)
   - [Schematic](#schematic)
     * [XOR gate](#xor-gate)
+    * [Converter Circuit](#converter-circuit)
   * [Symbols](#symbols)
-  * [Parameters set for Voltage Source for inputs](#parameters-set-for-voltage-source-for-inputs)
-  * [Parameters set for DC Voltage Source for VDD](#parameters-set-for-dc-voltage-source-for-vdd)  
-  * [Transient Settings](#transient-settings)
+  * [Implementation](#implementation) 
   * [Netlist](#netlist)
-  * [Output Waveforms](#output-waveforms)
-  * [Explanation for Observed Waveforms](#explanation-for-observed-waveforms)
+  * [Waveforms](#waveforms)
+  * [Comparison of _w/l_ values](#comparison-of-w/l-values)
+  * [Scaling](#scaling)
   * [Conclusion](#conclusion)
   * [Acknowledgement](#acknowledgement)
   * [References](#references)
@@ -30,62 +30,18 @@ and XNOR circuits were used to improve circuit performance and reduce area.
 
 ## Reference Circuit
 
-The electronic buzzer circuit selects the output corresponding to the the input applied first. The other two inputs become
-don’t cares, and do not affect the output until the first input
-signal becomes low again. The proposed circuit utilizes the
-properties of ’D-type Latch’, also called transparent latch,
-without using the enable. The latch circuit composed of NOR
-gates and NOT gates, is slightly modified to meet the design
-requirements.
-Fig. 1 represents the digital combinational logic design of
-the circuit using NOR and NOT gates. Fig. 2 and Fig. 3
-represent the NOR and NOT gates using CMOS circuit which
-is comprised of two parts - the pull-up lattice composed of
-PMOS circuit and the pull-down lattice composed of NMOS
-circuit. PMOS circuit is connected to supply voltage VDD
-and NMOS circuit is connected to Ground terminal. Fig. 4
-represents the various output waveforms. The inputs are taken
-as A, B and C with outputs as Q1, Q2 and Q3 corresponding
-to the respective inputs.
-Q1 = (A’+QA+B+C)’,
-Q2 = (B’+QB+A+C)’,
-Q3 = (C’+QC+A+B)’ 
-
-## Reference Circuit Diagram
-<p align="center">
-<img src="Schematic_2.jpg"></br>
-  Fig. 1:  Reference Combinational logic circuit design.
- <p align="center">
- <img src="Nor gate_2.jpg"></br> 
-  Fig. 2:  CMOS 4 input NOR Gate
-  
- <p align="center">
- <img src="NOT gate_2.jpg"></br>
-  Fig. 3:  CMOS 2 input NOT Gate  
-</p>
-
-## Reference Circuit Waveforms
-
-![output waveforms_2](https://user-images.githubusercontent.com/70422874/155539930-9416088b-816f-45db-a764-508826d3d41f.jpg)
-<p align="center">
-  Fig. 4: Expected Waveforms
-</p>
 
 # Simulation in Synopsys
 ## Schematic
 ### XOR Gate
 ![image](https://user-images.githubusercontent.com/70422874/155391860-09e912b9-d88d-4d67-84d0-2c48db04792c.png)
 ![image](https://user-images.githubusercontent.com/70422874/155391899-e737577b-1376-4b99-b56b-191fa76d165d.png)
-![image](https://user-images.githubusercontent.com/70422874/155391928-f8b38e8e-c9b8-483f-bfff-9768b1a72945.png)
-![image](https://user-images.githubusercontent.com/70422874/155391951-03807fd0-1c96-4018-b764-8a64a092ea3c.png)
-![image](https://user-images.githubusercontent.com/70422874/155391987-0478fb2c-e091-466d-abb0-db9cc0abdf14.png)
-![image](https://user-images.githubusercontent.com/70422874/155392010-a5aee987-be9b-4e9a-8958-be236835d81d.png)
 
 <p align="center">
-  Fig. 5(i), (ii), (iii), (iv), (v), (vi): Final simulated circuit.
+  Fig. 2(i): Implementation of XOR circuit; (ii): Symbol for the XOR circuit.
 </p>
-Note: To make the circuit symbols more understandable, the magnified images of the symbols(along with their internal designs) have been provided alongside the actual design.
 
+### Converter Circuit
 
 ## Symbols
 ![image](https://user-images.githubusercontent.com/70422874/155395211-46a552b1-bb5b-46b6-8c6b-2f2644efc1c9.png)
