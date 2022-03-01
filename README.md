@@ -6,7 +6,6 @@
 
 # Table of Contents
   * [Introduction](#introduction)
-  * [Reference Circuit](#reference-circuit)
 - [Simulation in Synopsys](#simulation-in-synopsys)
   - [Schematic and Symbols](#schematic-and-symbols)
     * [XOR gate](#xor-gate)
@@ -27,41 +26,38 @@ Gray codes are very useful for creating a normal sequence of binary numbers that
 The binary to gray code converter is based on a very common transmission gate technology. For operating at low supply voltages(below 2V), double pass-transistor(DPL) XOR
 and XNOR circuits were used to improve circuit performance and reduce area.
 
-## Reference Circuit
-
-
 # Simulation in Synopsys
 ## Schematic and Symbols
 ### XOR Gate
 ![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_ckt2.png)
 
-Fig. 2(i): Implementation of XOR circuit
+_Fig. 1(i): Implementation of XOR circuit_
 
 <img src="https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_sym.png" width="500"/>
 
-Fig. 2(ii): Symbol for the XOR circuit.
+_Fig. 1(ii): Symbol for the XOR circuit_
 
 ### Converter Circuit
 ![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/BGC_ckt2.png)
 
-Fig. 3(i): Implementation of the 3-bit Binary to Grey Code converter circuit
+_Fig. 2(i): Implementation of the 3-bit Binary to Grey Code converter circuit_
 
 <img src="https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/BGC_sym.png" width="500"/>
 
-Fig. 3(ii): Symbol designed for the circuit.
+_Fig. 2(ii): Symbol designed for the circuit_
 
 ![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/BCG_simulation.png)
 
-Fig. 3(iii): Final circuit for simulation.
+_Fig. 2(iii): Final circuit for simulation_
 
 ## Implementation
-* Each XOR gate is implemented as a combination of CMOS transmission-gate and CMOS inverters, and is sized uniformly with (W/L)pFET/(W/L)nFET = (0.55u/0.15u)/(0.42u/0.15u).
-* The final IC has total 20 transistors, two XOR gates having 8 transistors each and 4 transistors forming a buffer for getting g2 directly from input b2.
+* Each XOR gate is implemented as a combination of CMOS transmission-gate and CMOS inverters, and is sized uniformly with (W/L)pFET/(W/L)nFET = **(0.55u/0.15u)/(0.42u/0.15u)**.
+* The final IC has total **20 transistors**, two XOR gates having 8 transistors each and 4 transistors forming a buffer for getting g2 directly from input b2.
 * Each XOR gate is made up of three CMOS inverters and one transmission-gate with transistors sized over a constant width of 0.3 um.
-* The sizing for the two inverters catching the inputs is taken to be (W/L)pFET/(W/L)nFET = (0.3u/0.09u)/(0.3u/0.09u)
-* The transistors in the transmission gate is sized following the sizing rule as (W/L)pFET/(W/L)nFET = (0.3u/0.05u)/(0.3u/0.05u)
-* The inverter at the output is has (W/L)pFET/(W/L)nFET = (0.3u/0.05u)/(0.3u/0.06u)
-* The buffer transistors in the final circuit have a sizing of (W/L)pFET/(W/L)nFET = (0.3u/0.03u)/(0.3u/0.03u)
+* The sizing for the two **inverters catching the inputs** is taken to be (W/L)pFET/(W/L)nFET = **(0.3u/0.09u)/(0.3u/0.09u)**
+* The transistors in the **transmission gate** is sized following the sizing rule as (W/L)pFET/(W/L)nFET = **(0.3u/0.05u)/(0.3u/0.05u)**
+* The **inverter at the output** is has (W/L)pFET/(W/L)nFET = **(0.3u/0.05u)/(0.3u/0.06u)**
+* The **buffer transistors** in the final circuit have a sizing of (W/L)pFET/(W/L)nFET = **(0.3u/0.03u)/(0.3u/0.03u)**
 
 ## Netlist
 ```
@@ -158,19 +154,40 @@ c6 g2 gnd! c=1p
 ## Waveforms
 ![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/BGC_wav.png)
 
-Fig. 4: Output waveforms corresponding to _fig. 3(iii)_ in order of g2, b2, g1, b1, g0, b0 from top to bottom 
+_Fig. 5: Output waveforms corresponding to fig. 3(iii) in order of **g2, b2, g1, b1, g0, b0** from top to bottom_
   
-  Note: The order is similar to the reference waveform given in the [literature survey](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/3-bit%20Binary%20to%20Grey%20Code%20Converter%20using%20Low%20Voltage%20XOR%20Gates.pdf).
-</p>
+  Note #1: The order is similar to the reference waveform given in the [literature survey](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/3-bit%20Binary%20to%20Grey%20Code%20Converter%20using%20Low%20Voltage%20XOR%20Gates.pdf).
+  Note #2: Rise time and fall time for the inputs are set as 0.01 us and 0.03 us respectively
 
-## Explanation for Observed Waveforms
-![output waveforms_2](https://user-images.githubusercontent.com/70422874/155540594-344ba5d0-19c4-427b-bd31-658dee3f7072.jpg)
+## Comparison of _w/l_ values
+Here is a graphical comparison of the effect of various _w/l_ values of the inverter at the output on the waveform of the XOR output in simulation of the following circuit:
+
+![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_sim.png)
+
+* (W/L)pFET/(W/L)nFET = **(0.3u/0.05u)/(0.3u/0.06u)**
+![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_1.png)
+
+* (W/L)pFET/(W/L)nFET = **(0.3u/0.05u)/(0.3u/0.04u)**
+![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_2.png)
+
+* (W/L)pFET/(W/L)nFET = **(0.3u/0.05u)/(0.3u/0.08u)**
+![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_3.png)
+
+* (W/L)pFET/(W/L)nFET = **(0.3u/0.08u)/(0.3u/0.06u)**
+![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_4.png)
+
+* (W/L)pFET/(W/L)nFET = **(0.3u/0.04u)/(0.3u/0.06u)**
+![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_5.png)
 
 In time interval T1, input A goes high first. The output follows this input only, while any change in voltage of the other two inputs has NO effect on the output, in this time interval, ie. until input A remains high. Similar changes take place in time intervals T2 and T3.
 
+## Scaling
+
+We can scale the converter to include more number of bits by cascading multiple 3-bit converters as: 
+![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/BGC_cascaded.png)
+
 ## Conclusion
-Thus, the observed output waveforms match perfectly with our hand drawn output waveforms, for the required set of inputs. Hence, our required design for CMOS digital combinational logic based electronic buzzer circuit with 3 inputs that selects the output based on  the relative time of application of input(which is assumed here as input going from low to high voltage levels), has been implemented and verified using Synopsys Custom Compiler on 28nm CMOS technology. As per design requirements, similar logic can be applied  for a greater number of inputs.
-The designed circuit is purely combinational, and hence independent of any clock signal.
+Thus, the output waveforms obtained match perfectly with the output waveforms observed in the literature survey, for a similar set of inputs. Hence, our required design for the 3-bit binary to grey code converter the receives three binary inputs and provides the 3-bit grey code output correctly corresponding to the truth table, has been implemented and verified using Synopsys Custom Compiler on 28nm CMOS technology. As per design requirements, the 3-bit binary to grey code converter can be cascaded to convert a binary number with more bits. The designed circuit is purely combinational, and hence independent of any clock signal.
 
 ## Acknowledgement
 1. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
@@ -180,13 +197,9 @@ The designed circuit is purely combinational, and hence independent of any clock
 5. https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/
 
 ## References
-[1] Balraj Singh, Mukesh Kumar, and J. S. Ubhi, “Analysis of CMOS based
-NAND and NOR Gates at 45mm Technology”, IJEECS, ISSN 2348-
-117X, Volume 6, Issue 4, April 2017.
-[2] Sudhakar Alluri1, Uma Umaheshwar, B. Rajendra Naik and
-N.S.S.Reddy, “Design and Performance Analysis of VLSI Circuits in
-180nm Technology”, IJCRT, ISSN: 2320-2882, Volume 6, Issue 2 April
-2018
+[1] J.Wang, S.Fang and W.Feng, "New EfEcient Designs for XOR and XNOR Functions on the Transistor Level," IEEE Journal on Solid-State Circuits, vol. 29, No.7, pp. 780--786, July 1994.
+[2] Hanho Lee and G. E. Sobelman, "New low-voltage circuits for XOR and XNOR," Proceedings IEEE SOUTHEASTCON '97. 'Engineering the New Century', 1997, pp. 225-229, doi: 10.1109/SECON.1997.598676.
+[3] L. Li and J. Hu, "A transmission gate flip-flop based on dual-threshold CMOS techniques," 2009 52nd IEEE International Midwest Symposium on Circuits and Systems, 2009, pp. 539-542, doi: 10.1109/MWSCAS.2009.5236037.
 
 
 
