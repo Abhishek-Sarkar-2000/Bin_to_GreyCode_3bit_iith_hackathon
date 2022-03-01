@@ -148,12 +148,12 @@ c6 g2 gnd! c=1p
 
 .end
 ```
-## Output Waveforms
-![image](https://user-images.githubusercontent.com/70422874/155396831-0b9b3acf-57ae-49d3-a4c5-2b237eda43e1.png)
+## Waveforms
+![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/BCG_wav.png)
 
-  Fig. 12: Required Simulation Waveforms 
+Fig. 4: Output waveforms corresponding to _fig. 3(iii)_ in order of g2, b2, g1, b1, g0, b0 from top to bottom 
   
-  Note: The 1st 3 waveforms are the inputs A, B, and C respectively, while the last 3 are the outputs Q1, Q2, and Q3 respectively, which is same as depicted in above expected waveform representation.
+  Note: The order is similar to the reference waveform given in the [literature survey](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/3-bit%20Binary%20to%20Grey%20Code%20Converter%20using%20Low%20Voltage%20XOR%20Gates.pdf).
 </p>
 
 ## Explanation for Observed Waveforms
