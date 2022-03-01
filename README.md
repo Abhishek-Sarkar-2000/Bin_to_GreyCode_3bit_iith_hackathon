@@ -34,14 +34,20 @@ and XNOR circuits were used to improve circuit performance and reduce area.
 # Simulation in Synopsys
 ## Schematic
 ### XOR Gate
-![image](https://user-images.githubusercontent.com/70422874/155391860-09e912b9-d88d-4d67-84d0-2c48db04792c.png)
-![image](https://user-images.githubusercontent.com/70422874/155391899-e737577b-1376-4b99-b56b-191fa76d165d.png)
+![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_ckt.png)
+![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_sym.png)
 
 <p align="center">
   Fig. 2(i): Implementation of XOR circuit; (ii): Symbol for the XOR circuit.
 </p>
 
 ### Converter Circuit
+![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/BGC_ckt.png)
+![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/BGC_sym.png)
+
+<p align="center">
+  Fig. 2(i): Implementation of the 3-bit Binary to Grey Code converter circuit; (ii): Symbol designed for the circuit.
+</p>
 
 ## Symbols
 ![image](https://user-images.githubusercontent.com/70422874/155395211-46a552b1-bb5b-46b6-8c6b-2f2644efc1c9.png)
