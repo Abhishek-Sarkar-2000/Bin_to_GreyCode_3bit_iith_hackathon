@@ -8,7 +8,7 @@
   * [Introduction](#introduction)
   * [Reference Circuit](#reference-circuit)
 - [Simulation in Synopsys](#simulation-in-synopsys)
-  - [Schematic & Symbols](#schematic-symbols)
+  - [Schematic & Symbols](#schematic-&-symbols)
     * [XOR gate](#xor-gate)
     * [Converter Circuit](#converter-circuit)
   * [Implementation](#implementation) 
