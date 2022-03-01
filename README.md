@@ -50,6 +50,10 @@ Fig. 3(i): Implementation of the 3-bit Binary to Grey Code converter circuit
 
 Fig. 3(ii): Symbol designed for the circuit.
 
+![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/BCG_simulation.png)
+
+Fig. 3(iii): Final circuit for simulation.
+
 ## Implementation
 
 ## Netlist
