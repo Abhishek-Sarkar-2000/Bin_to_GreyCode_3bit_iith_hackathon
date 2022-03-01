@@ -33,7 +33,7 @@ and XNOR circuits were used to improve circuit performance and reduce area.
 # Simulation in Synopsys
 ## Schematic and Symbols
 ### XOR Gate
-![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_ckt.png)
+![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_ckt2.png)
 
 Fig. 2(i): Implementation of XOR circuit
 
@@ -42,7 +42,7 @@ Fig. 2(i): Implementation of XOR circuit
 Fig. 2(ii): Symbol for the XOR circuit.
 
 ### Converter Circuit
-![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/BGC_ckt.png)
+![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/BGC_ckt2.png)
 
 Fig. 3(i): Implementation of the 3-bit Binary to Grey Code converter circuit
 
@@ -55,6 +55,13 @@ Fig. 3(ii): Symbol designed for the circuit.
 Fig. 3(iii): Final circuit for simulation.
 
 ## Implementation
+* Each XOR gate is implemented as a combination of CMOS transmission-gate and CMOS inverters, and is sized uniformly with (W/L)pFET/(W/L)nFET = (0.55u/0.15u)/(0.42u/0.15u).
+* The final IC has total 20 transistors, two XOR gates having 8 transistors each and 4 transistors forming a buffer for getting g2 directly from input b2.
+* Each XOR gate is made up of three CMOS inverters and one transmission-gate with transistors sized over a constant width of 0.3 um.
+* The sizing for the two inverters catching the inputs is taken to be (W/L)pFET/(W/L)nFET = (0.3u/0.09u)/(0.3u/0.09u)
+* The transistors in the transmission gate is sized following the sizing rule as (W/L)pFET/(W/L)nFET = (0.3u/0.05u)/(0.3u/0.05u)
+* The inverter at the output is has (W/L)pFET/(W/L)nFET = (0.3u/0.05u)/(0.3u/0.06u)
+* The buffer transistors in the final circuit have a sizing of (W/L)pFET/(W/L)nFET = (0.3u/0.03u)/(0.3u/0.03u)
 
 ## Netlist
 ```
@@ -149,7 +156,7 @@ c6 g2 gnd! c=1p
 .end
 ```
 ## Waveforms
-![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/BCG_wav.png)
+![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/BGC_wav.png)
 
 Fig. 4: Output waveforms corresponding to _fig. 3(iii)_ in order of g2, b2, g1, b1, g0, b0 from top to bottom 
   
