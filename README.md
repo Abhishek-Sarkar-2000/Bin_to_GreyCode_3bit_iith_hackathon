@@ -35,8 +35,9 @@ and XNOR circuits were used to improve circuit performance and reduce area.
 ## Schematic
 ### XOR Gate
 ![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_ckt.png)
+
+<img src="https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_sym.png" width="500" align="middle">
 <p align="center">
-<img src="https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_sym.png" width="500" align="center"/>
   Fig. 2(i): Implementation of XOR circuit; (ii): Symbol for the XOR circuit.
 </p>
 
