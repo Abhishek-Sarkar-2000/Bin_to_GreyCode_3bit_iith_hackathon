@@ -50,114 +50,70 @@ Fig. 3(i): Implementation of the 3-bit Binary to Grey Code converter circuit
 
 Fig. 3(ii): Symbol designed for the circuit.
 
-## Parameters set for Voltage Source for inputs
-![image](https://user-images.githubusercontent.com/70422874/155529254-db5e778c-b6bd-4893-af09-7475bd618c08.png)
-
- <p align="center">
-  Fig. 9(i): Voltage Source Input at A.
-  </p>
-  
-![image](https://user-images.githubusercontent.com/70422874/155529693-ed483e7a-fcf7-4794-b17a-9611bb446921.png)
-
-<p align="center">
-  Fig. 9(ii): Voltage Source Input at B.
-  </p>
-
-![image](https://user-images.githubusercontent.com/70422874/155529889-582dc467-1f8b-4902-99d1-e5e588a26865.png)
-<p align="center">
-Fig. 9(iii): Voltage Source Input at C.  
-
-</p>
-
-## Parameters set for DC Voltage Source for VDD
-![image](https://user-images.githubusercontent.com/70422874/155530830-8109a26c-d14d-4e33-a19b-5f666a7b59ce.png)
-<p align="center">
-  Fig. 10: VDD Supply voltage
-</p>
-
-
-## Transient Settings
-![image](https://user-images.githubusercontent.com/70422874/155531098-e85de0da-2f43-40a4-bc41-49c69e29d961.png)
-<p align="center">
-  Fig. 11: The Transient Analysis Inputs run at 1us step with stop time 100us 
-</p>
+## Implementation
 
 ## Netlist
 ```
 *  Generated for: PrimeSim
-*  Design library name: my_design
-*  Design cell name: design
+*  Design library name: abhishek_lib
+*  Design cell name: bgc_3bit_tb
 *  Design view name: schematic
 .lib 'saed32nm.lib' TT
 
 *Custom Compiler Version S-2021.09
-*Wed Feb 23 19:46:53 2022
+*Tue Mar  1 11:57:41 2022
 
-.global gnd!
+.global gnd! vdd!
 ********************************************************************************
-* Library          : my_design
-* Cell             : NOR_2
+* Library          : abhishek_lib
+* Cell             : XOR
 * View             : schematic
 * View Search List : hspice hspiceD schematic spice veriloga
 * View Stop List   : hspice hspiceD
 ********************************************************************************
-.subckt nor_2 net2 net9 net12 net16 net27
-xm5 net31 net27 net9 net31 p105 w=0.654u l=0.03u nf=1 m=1
-xm0 net31 net12 net2 net2 p105 w=0.654u l=0.03u nf=1 m=1
-xm4 net16 net27 net9 net16 n105 w=0.518u l=0.03u nf=1 m=1
-xm2 net9 net12 net16 net16 n105 w=0.518u l=0.03u nf=1 m=1
-.ends nor_2
+.subckt xor a b gnd_1 out vdd vt_bulk_n_gnd! vt_bulk_p_vdd!
+xm8 out net24 gnd_1 vt_bulk_n_gnd! n105 w=0.3u l=0.06u nf=1 m=1
+xm2 net24 a b vt_bulk_n_gnd! n105 w=0.3u l=0.05u nf=1 m=1
+xm1 net24 b a vt_bulk_n_gnd! n105 w=0.3u l=0.09u nf=1 m=1
+xm0 net11 a gnd_1 vt_bulk_n_gnd! n105 w=0.9u l=0.09u nf=1 m=1
+xm9 out net24 vdd vt_bulk_p_vdd! p105 w=0.3u l=0.05u nf=1 m=1
+xm5 net24 net11 b vt_bulk_p_vdd! p105 w=0.3u l=0.05u nf=1 m=1
+xm4 net24 b net11 vt_bulk_p_vdd! p105 w=0.3u l=0.09u nf=1 m=1
+xm3 net11 a vdd vt_bulk_p_vdd! p105 w=0.3u l=0.09u nf=1 m=1
+.ends xor
 
 ********************************************************************************
-* Library          : my_design
-* Cell             : NOR_4_1
+* Library          : abhishek_lib
+* Cell             : bin_grcode_conv_3bit
 * View             : schematic
 * View Search List : hspice hspiceD schematic spice veriloga
 * View Stop List   : hspice hspiceD
 ********************************************************************************
-.subckt nor_4_1 net4 net5 net14 net15 net18 net21 net22
-xi4 net18 net21 net48 net22 net53 nor_2
-xi3 net18 net53 net51 net22 net51 nor_2
-xi2 net18 net51 net14 net22 net15 nor_2
-xi1 net18 net48 net50 net22 net50 nor_2
-xi0 net18 net50 net4 net22 net5 nor_2
-.ends nor_4_1
+.subckt bin_grcode_conv_3bit gnd_1 vdd b0 b1 b2 g0 g1 g2 vt_bulk_n_gnd!
++ vt_bulk_p_vdd!
+xi1 b1 b0 gnd_1 g0 vdd vt_bulk_n_gnd! vt_bulk_p_vdd! xor
+xi0 b2 b1 gnd_1 g1 vdd vt_bulk_n_gnd! vt_bulk_p_vdd! xor
+xm10 g2 net40 gnd_1 vt_bulk_n_gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm6 net40 b2 gnd_1 vt_bulk_n_gnd! n105 w=0.1u l=0.03u nf=1 m=1
+xm9 g2 net40 vdd vt_bulk_p_vdd! p105 w=0.1u l=0.03u nf=1 m=1
+xm8 net40 b2 vdd vt_bulk_p_vdd! p105 w=0.1u l=0.03u nf=1 m=1
+.ends bin_grcode_conv_3bit
 
 ********************************************************************************
-* Library          : my_design
-* Cell             : NOT_2
+* Library          : abhishek_lib
+* Cell             : bgc_3bit_tb
 * View             : schematic
 * View Search List : hspice hspiceD schematic spice veriloga
 * View Stop List   : hspice hspiceD
 ********************************************************************************
-.subckt not_2 net9 net12 net13 net14
-xm1 net9 net14 net13 net9 n105 w=0.518u l=0.03u nf=1 m=1
-xm2 net13 net14 net12 net12 p105 w=1.06u l=0.03u nf=1 m=1
-.ends not_2
-
-********************************************************************************
-* Library          : my_design
-* Cell             : design
-* View             : schematic
-* View Search List : hspice hspiceD schematic spice veriloga
-* View Stop List   : hspice hspiceD
-********************************************************************************
-xi4 net70 net50 net84 net71 net81 net25 gnd! nor_4_1
-xi3 net46 net84 net25 net24 net81 net50 gnd! nor_4_1
-xi0 net42 net50 net8 net25 net81 net84 gnd! nor_4_1
-xi5 net81 net71 net25 gnd! net74 nor_2
-xi2 net81 net24 net50 gnd! net49 nor_2
-xi1 net81 net8 net84 gnd! net85 nor_2
-xi9 gnd! net81 net70 net74 not_2
-xi7 gnd! net81 net42 net85 not_2
-xi8 gnd! net81 net46 net49 not_2
-v10 net81 gnd! dc=1.2
-c15 net84 gnd! c=1p
-c14 net25 gnd! c=1p
-c13 net50 gnd! c=1p
-v23 net49 gnd! dc=0 pat ( 1.2 0 0 0.1u 0.1u 5u b001001110010 )
-v22 net85 gnd! dc=0 pat ( 1.2 0 0 0.1u 0.1u 5u b011100100010 )
-v24 net74 gnd! dc=0 pat ( 1.2 0 0 0.1u 0.1u 5u b000100100111 )
+xi1 gnd! net24 b0 b1 b2 g0 g1 g2 gnd! vdd! bin_grcode_conv_3bit
+v4 b2 gnd! dc=0 pat ( 1.05 0 0 0.01u 0.03u 1u b00001111 )
+v3 b1 gnd! dc=0 pat ( 1.05 0 0 0.01u 0.03u 1u b00110011 )
+v2 b0 gnd! dc=0 pat ( 1.05 0 0 0.01u 0.03u 1u b01010101 )
+v5 net24 gnd! dc=1.2
+c8 g0 gnd! c=1p
+c7 g1 gnd! c=1p
+c6 g2 gnd! c=1p
 
 
 
@@ -166,11 +122,11 @@ v24 net74 gnd! dc=0 pat ( 1.2 0 0 0.1u 0.1u 5u b000100100111 )
 
 
 
-.tran '1u' '100u' name=tran
+.tran '0.5u' '8u' name=tran
 
 .option primesim_remove_probe_prefix = 0
 .probe v(*) i(*) level=1
-.probe tran v(net25) v(net49) v(net50) v(net74) v(net84) v(net85)
+.probe tran v(b0) v(b1) v(b2) v(g0) v(g1) v(g2)
 
 .temp 25
 
@@ -187,7 +143,6 @@ v24 net74 gnd! dc=0 pat ( 1.2 0 0 0.1u 0.1u 5u b000100100111 )
 
 
 .end
-
 ```
 ## Output Waveforms
 ![image](https://user-images.githubusercontent.com/70422874/155396831-0b9b3acf-57ae-49d3-a4c5-2b237eda43e1.png)
