@@ -8,10 +8,9 @@
   * [Introduction](#introduction)
   * [Reference Circuit](#reference-circuit)
 - [Simulation in Synopsys](#simulation-in-synopsys)
-  - [Schematic](#schematic)
+  - [Schematic & Symbols](#schematic-symbols)
     * [XOR gate](#xor-gate)
     * [Converter Circuit](#converter-circuit)
-  * [Symbols](#symbols)
   * [Implementation](#implementation) 
   * [Netlist](#netlist)
   * [Waveforms](#waveforms)
@@ -32,7 +31,7 @@ and XNOR circuits were used to improve circuit performance and reduce area.
 
 
 # Simulation in Synopsys
-## Schematic
+## Schematic & Symbols
 ### XOR Gate
 ![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_ckt.png)
 
@@ -50,37 +49,6 @@ Fig. 3(i): Implementation of the 3-bit Binary to Grey Code converter circuit
 <img src="https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/BGC_sym.png" width="500"/>
 
 Fig. 3(ii): Symbol designed for the circuit.
-
-## Symbols
-![image](https://user-images.githubusercontent.com/70422874/155395211-46a552b1-bb5b-46b6-8c6b-2f2644efc1c9.png)
-
-   Fig. 6(i): NOR_2 symbol   
-
-
-![image](https://user-images.githubusercontent.com/70422874/155393369-71c9335b-19d2-4000-ae9c-e6aefe08ab2a.png)
-
-   Fig. 6(ii): NOR_2 schematic
-   
-   
- ![image](https://user-images.githubusercontent.com/70422874/155395532-ce04e960-efd8-4d69-885d-67d11b43cca7.png)
-
-    Fig. 7(i): NOT_2 symbol  
-   
-![image](https://user-images.githubusercontent.com/70422874/155393400-51ab7b79-6a65-4160-892d-a8d0ca3e5332.png)
-
-    Fig. 7(ii): NOT_2 schematic
-        
-![image](https://user-images.githubusercontent.com/70422874/155396013-98aaf6d4-464b-4163-82ce-7be0ba5ab453.png)
-
- Fig. 8(i): NOR_4 symbol
-    
-![image](https://user-images.githubusercontent.com/70422874/155395881-4531da61-646d-4454-8788-574b423e16e3.png)
-    <p align="center">
-Fig. 8(ii): NOR_4 schematic
-    
-    
-  </p>
-Note: To make the CMOS Level circuit more compatible and Industry ready a Symbol reference has been created. So, it makes easy whenever a testbench of different Parameters needs to be tested.
 
 ## Parameters set for Voltage Source for inputs
 ![image](https://user-images.githubusercontent.com/70422874/155529254-db5e778c-b6bd-4893-af09-7475bd618c08.png)
