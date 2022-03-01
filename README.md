@@ -1,12 +1,12 @@
 # 3-bit Binary to Grey Code Converter using Low Voltage XOR Gates
-* This is a submission repo for the final circuit design implemented and simulated in custom compiler by [Synopsys, Inc.](https://www.synopsys.com/) on 28nm CMOS technology as a result of literature survey conducted, for [IITH Analog IC Design Hackathon](https://hackathoniith.in/).
+* This is a submission repo for the final circuit design implemented and simulated in custom compiler by [Synopsys, Inc.](https://www.synopsys.com/) on 28nm CMOS technology as a result of literature survey conducted, for [IITH Analog IC Design Hackathon](https://hackathoniith.in/), 2022.
 * The aforementioned literature survey can be referred [here](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/3-bit%20Binary%20to%20Grey%20Code%20Converter%20using%20Low%20Voltage%20XOR%20Gates.pdf) in the repository.
 * The repo contains, apart from the main circuit and its waveforms, a comparison of output waveform for the XOR gate made with varying _w/l_ ratios on the MOS transistors, and also a method to scale the circuit by cascading the 3-bit binary-to-grey code converter IC designed.
 
 
 # Table of Contents
-   * [Abstract](#abstract)
-  * [Reference Circuit Details](#reference-circuit-details)
+  * [Introduction](#introduction)
+  * [Reference Circuit](#reference-circuit)
   * [Reference Circuit Diagram](#reference-circuit-diagram)
   * [Reference Circuit Waveforms](#reference-circuit-waveforms)
 - [Simulation in Synopsys](#simulation-in-synopsys)
@@ -23,19 +23,13 @@
   * [References](#references)
 
 
-## Abstract
+## Introduction
 
-Design for a CMOS digital combinational logicbased electronic buzzer circuit that selects the output based
-on the relative time of application of input. There are three
-independent digital input points, corresponding to which there
-are three outputs. The output corresponding to the first applied
-input becomes high from an initial low state and remains stable
-at that state, unaffected by any change in input signals from the
-other two input points. The output returns to its initial low state
-only when the first input signal is removed. The circuit is purely
-combinational as the outputs are independent of any clock signal. 
+Gray codes are very useful for creating a normal sequence of binary numbers that may result in an error when two successive values differ by only one bit (binary digit). Recognizing Gray codes is very easy since they refer to an ordering of binary numbers in which successive values differ by only one bit.
+The binary to gray code converter is based on a very common transmission gate technology. For operating at low supply voltages(below 2V), double pass-transistor(DPL) XOR
+and XNOR circuits were used to improve circuit performance and reduce area.
 
-## Reference Circuit Details
+## Reference Circuit
 
 The electronic buzzer circuit selects the output corresponding to the the input applied first. The other two inputs become
 don’t cares, and do not affect the output until the first input
