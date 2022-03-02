@@ -184,7 +184,7 @@ Here is a graphical comparison of the effect of various _w/l_ values of the inve
 
 ![image](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/screenshots/XOR_5.png)
 
-In time interval T1, input A goes high first. The output follows this input only, while any change in voltage of the other two inputs has NO effect on the output, in this time interval, ie. until input A remains high. Similar changes take place in time intervals T2 and T3.
+As we can see, there is an unwanted disturbance in the waveform which is because of the rise and fall time delay of the transistors. We used such values which provided an output close to ideal in the final 3-bit binary to grey code converter circuit.
 
 ## Scaling
 
