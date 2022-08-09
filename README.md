@@ -2,6 +2,7 @@
 * This is a submission repo for the final circuit design implemented and simulated in custom compiler by [Synopsys, Inc.](https://www.synopsys.com/) on 28nm CMOS technology as a result of literature survey conducted, for [IITH Analog IC Design Hackathon](https://hackathoniith.in/), 2022.
 * The aforementioned literature survey can be referred [here](https://github.com/Abhishek-Sarkar-2000/Bin_to_GreyCode_3bit_iith_hackathon/blob/main/3-bit%20Binary%20to%20Grey%20Code%20Converter%20using%20Low%20Voltage%20XOR%20Gates.pdf) in the repository.
 * The repo contains, apart from the main circuit and its waveforms, a comparison of output waveform for the XOR gate made with varying _w/l_ ratios on the MOS transistors, and also a method to scale the circuit by cascading the 3-bit binary-to-grey code converter IC designed.
+* [UPDATE] Click [here](IC_Des_hackathon.pdf) to view the Certificate of Appreciation.
 
 
 # Table of Contents
